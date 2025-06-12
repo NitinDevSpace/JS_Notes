@@ -1,0 +1,68 @@
+Write a JS program to display information of various products from a list.
+Read the entire problem description carefully to understand the necessary details.
+
+Product-cards-image
+
+You are provided with: (Don't make any changes to the below-mentioned files)
+1. index.html => containing basic document structure
+2. styles.css => contains styling
+3. and data.js => has a data variable that contains an Array of Objects with details of several products.
+
+As you can access the data array, your task is to
+write a program to make a product card for each of the product's objects inside this array.
+
+Algorithm:
+1. Traverse through the data Array.
+2. Individually accessing each product's Object.
+3. Inject relevant details like title, category, and rating count in the below-mentioned HTML template to make a div.card.
+4. To make the rating stars:
+
+4.1. Round off the rating.rate value of an object to the nearest Integer
+4.2. Use this value to determine the number of empty and filled stars out of 5. (Ex: For a rating of 3/5 => 3 filled stars and 2 empty stars)
+4.3. Utilise these values in a loop to make filled and empty stars
+4.4. To make filled star symbol use a span tag with text as '&#9733;' and for empty star use '&#9734;'
+4.5. Note that it is important to add class of 'star__filled' and 'star__notfilled' for respective cases. (To pass final test case)
+4.5. Wrap these stars (span tags) inside a div with class 'all__star'. The final result should be as shown below.
+<div class="all__star">
+<span class="star__filled">&#9733;</span>
+<span class="star__filled">&#9733;</span>
+<span class="star__filled">&#9733;</span>
+<span class="star__filled">&#9733;</span>
+<span class="star__notfilled">&#9734;</span>
+</div>
+5. Finally, after the div.card is ready with all the details injected, add it to div#container
+
+The HTML structure of a card is as follows: (Use this directly as card's HTML template)
+
+<div class="card">
+<div class="details">
+<span class="product__name">${product.title}</span>
+<br>
+<span class="product__category">${product.category}</span>
+<div class="all__star">
+${HTML FOR SPANS OF STARS (as discussed in step 4 of Algorithm)}
+</div>
+<div class="rating__count">Rating Count : <span>${product.rating.count}</span></div>
+</div>
+<div class="btn">
+<button class="btn__buy">Buy Now</button>
+</div>
+</div>
+
+and object inside the data array has the following structure: (Note that only a few of these values are required to be injected)
+{
+id: 1,
+title: "Sample Product 1",
+price: 109.95,
+description:
+"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your every day",
+category: "men's clothing",
+image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+rating: {
+rate: 3.9,
+count: 120,
+},
+}
+
+Use the above information to write the entire JS program in the script.js file or script tag. (below the script tag loading data.js file)
+Refer to the test cases to further understand the criteria to submit the problem successfully.

@@ -1,0 +1,23 @@
+/* Style for the accordion */
+.accordion {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.accordion-button {
+    background-color: #0074d9;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
