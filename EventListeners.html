@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<!-- <body>
+    <button id="btn">Say Hello</button>
+</body>
+<script>
+    // Write your JS program here ====
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', function(){
+        const newDiv = document.createElement("div")
+        newDiv.innerText = "Hello World!"
+        const body = document.querySelector('body')
+        body.appendChild(newDiv)
+    })
+
+</script>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+
+<script>
+    // Write your JS program here ====
+    const select = document.querySelectorAll('li')
+    const ele = select[6]
+    const newele = document.createElement('li')
+    newele.innerText = "7"
+    const parent = document.querySelector('ul')
+    parent.insertBefore(newele, ele)
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Delegation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      border: 1px solid;
+      height: 10rem;
+      width: 10rem;
+    }
+
+    .container>div:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red">red</div>
+    <div class="blue">blue</div>
+    <div class="green">green</div>
+  </div>
+  <script>
+    // Write JS Solution Here =================================
+    const container = document.querySelector('.container')
+      container.addEventListener('click', (e) => {
+        const color = e.target.getAttribute('class')
+        container.style.background = color
+    })
+  </script>
+</body> -->
+
+<!-- <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <script>
+      // WRITE THE JS PROGRAM HERE ====================================================================
+      let container = document.querySelector('body');
+      container.addEventListener('click', function (e) {
+        if (e.detail === 2) {
+          e.target.style.backgroundColor = 'green';
+        } else if (e.detail === 3) {
+          e.target.style.backgroundColor = 'initial';
+        } else {
+          e.target.style.backgroundColor = 'red';
+        }
+      });
+    </script>
+  </body> -->
+
+</html>

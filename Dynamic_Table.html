@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>DATABASE</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>S. No.</th>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Sameer</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rohan</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form>
+    <label for="name">Name:
+      <input type="text" id="name" />
+    </label>
+    <label for="marks">Marks:
+        <input type="number" id="marks" />
+    </label>
+    <input type="submit" value="Submit" />
+</form>
+
+<!-- Better way to write  -->
+<script>
+    document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent form reload
+
+    const nameValue = document.querySelector('#name').value.trim();
+    const marksValue = document.querySelector('#marks').value.trim();
+
+    // Simple validation (optional)
+    if (!nameValue || !marksValue) {
+        alert('Please enter both name and marks.');
+        return;
+    }
+
+    const tbody = document.querySelector('tbody');
+    const rowCount = tbody.rows.length;
+
+    // Create new row with cells
+    const row = tbody.insertRow();
+    row.innerHTML = `
+        <td>${rowCount + 1}</td>
+        <td>${nameValue}</td>
+        <td>${marksValue}</td>
+    `;
+
+    // Reset form fields
+    e.target.reset();
+    });
+
+</script>
+
+
+
+
+
+
+<!-- <script>
+    // Q Write a script which takes the entry from the form and add it into the table
+    const name = document.querySelector('#name')
+    const marks = document.querySelector('#marks')
+    const submit = document.querySelector('input[type="submit"]')
+
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const tbody = document.querySelector('tbody')
+      const size = document.querySelectorAll('tr')
+      const row = document.createElement('tr')
+
+      const sno = document.createElement('td')
+      sno.innerText = size.length
+      const tname = document.createElement('td')
+      tname.innerText = name.value
+      const tmarks = document.createElement('td')
+      tmarks.innerText = marks.value
+
+
+
+      tbody.appendChild(row)
+      row.appendChild(sno)
+      row.appendChild(tname)
+      row.appendChild(tmarks)
+
+    })
+
+  </script> -->
+
+  
+
+
+
+</body>
+
+</html>
